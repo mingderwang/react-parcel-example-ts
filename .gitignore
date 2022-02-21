@@ -8,3 +8,4 @@ build
 .cache
 .parcel-cache
 *.log
+.vercel
