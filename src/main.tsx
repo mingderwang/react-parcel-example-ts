@@ -1,7 +1,5 @@
-import * as React from 'react'
-import { render } from 'react-dom'
-// App wrapped with redux Provider, store, etc.
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 import { App } from './App'
 
-render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('app'))
