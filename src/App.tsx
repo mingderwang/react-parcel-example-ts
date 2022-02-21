@@ -1,5 +1,5 @@
 import * as React from 'react'
-// routing, etc.
+import Button from './components/Button'
 
 export class App extends React.Component {
   public render() {
@@ -7,6 +7,7 @@ export class App extends React.Component {
       <div>
         <title>Dashboard</title>
         <p>react, ming</p>
+        <Button />
       </div>
     )
   }
