@@ -6,11 +6,15 @@
   "scripts": {
     "dev": "parcel serve src/index.html --open",
     "start": "parcel serve src/index.html --no-cache",
-    "build": "parcel build src/index.html",
-    "clean": "rm -rf .parcel-cache dist"
+    "build": "yarn clean & parcel build src/index.html",
+    "clean": "rm -rf .parcel-cache dist",
+    "vercel": "vercel",
+    "vercel:prod": "vercel --prod"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "2.3.2",
     "@parcel/transformer-typescript-tsc": "^2.3.2",
+    "@parcel/transformer-webmanifest": "2.3.2",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "autoprefixer": "^10.4.2",
