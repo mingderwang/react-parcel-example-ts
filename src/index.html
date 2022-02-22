@@ -1,5 +1,5 @@
 <html>
-  <head>
+    <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -24,9 +24,6 @@
     />
     <link rel="manifest" href="./favicon_io/site.webmanifest" />
     <style type="text/css">
-      body {
-        background-image: url(happy.svg);
-      }
       p {
         color: rgb(200, 255, 0);
         text-align: center;
@@ -71,92 +68,46 @@
     </script>
   </head>
   <body>
-    <div class="m-5">
-      <h2 class="mb-4 text-2xl text-green-700 font-bold">Toggle</h2>
-      🌞
-      <div class="inline-block w-10">
-        <span
-          data-toggle-theme="dark"
-          data-act-class="pl-4"
-          class="border rounded-full border-green-700 flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0"
-        >
-          <span class="rounded-full w-3 h-3 m-1 bg-green-700"></span>
-        </span>
+    </div>
+    <div>
+      <div class="relative min-h-screen flex">
+        <!-- sidebar -->
+        <div class="bg-blue-800 text-blue-100 w-64 space-y-6">
+          <!-- logo -->
+          <a href="#" class="text-white flex item-center space-x-2">
+          <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span class="text-2xl font-extrabold">MS-hack</span>
+          </a>
+          <!-- nav -->
+          <nav>
+            <a href="#" class="block py-2.5 px-4">Home</a>
+            <a href="#" class="block py-2.5 px-4">About</a>
+            <a href="#" class="block py-2.5 px-4">Features</a>
+            <a href="#" class="block py-2.5 px-4">Pricing</a>
+          </nav>
+        </div>
+        <!-- content -->
+        <div class="flex-1 p-10 text-2xl font-bold">
+          content go here
+          <div class="m-5">
+            <h2 class="mb-4 text-2xl text-green-700 font-bold">Toggle</h2>
+            🌞
+            <div class="inline-block w-10">
+              <span
+                data-toggle-theme="dark"
+                data-act-class="pl-4"
+                class="border rounded-full border-green-700 flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0"
+              >
+                <span class="rounded-full w-3 h-3 m-1 bg-green-700"></span>
+              </span>
+            </div>
+            🌚
+          </div>
+        </div>
       </div>
-      🌚
-    </div>
-
-    <div class="m-5">
-      <h2 class="mb-4 text-2xl text-green-700 font-bold">Buttons</h2>
-      <button
-        data-act-class="shadow-outline"
-        data-set-theme=""
-        class="bg-green-700 focus:outline-none m-1 rounded p-2"
-      >
-        Default
-      </button>
-      <button
-        data-act-class="shadow-outline"
-        data-set-theme="dark"
-        class="bg-green-700 focus:outline-none m-1 rounded p-2"
-      >
-        Dark
-      </button>
-      <button
-        data-act-class="shadow-outline"
-        data-set-theme="black"
-        class="bg-green-700 focus:outline-none m-1 rounded p-2"
-      >
-        Black
-      </button>
-      <button
-        data-act-class="shadow-outline"
-        data-set-theme="🌸"
-        class="bg-green-700 focus:outline-none m-1 rounded p-2"
-      >
-        🌸 Pink
-      </button>
-      <button
-        data-act-class="shadow-outline"
-        data-set-theme="🐬"
-        class="bg-green-700 focus:outline-none m-1 rounded p-2"
-      >
-        🐬 Blue
-      </button>
-      <button
-        data-act-class="shadow-outline"
-        data-set-theme="🐤"
-        class="bg-green-700 focus:outline-none m-1 rounded p-2"
-      >
-        🐤 Yellow
-      </button>
-    </div>
-
-    <div class="m-5">
-      <h2 class="mb-4 text-2xl text-green-700 font-bold">Select</h2>
-      <select
-        data-choose-theme
-        class="focus:outline-none h-10 rounded-full px-3 border"
-      >
-        <option value="">Default</option>
-        <option value="dark">Dark</option>
-        <option value="black">Black</option>
-        <option value="🌸">🌸 Pink</option>
-        <option value="🐬">🐬 Blue</option>
-        <option value="🐤">🐤 Yellow</option>
-      </select>
-    </div>
-
-    <div class="m-5 bg-white rounded p-5">
-      <h2 class="mb-4 text-2xl text-bold">How to use:</h2>
-      Github:
-      <a
-        class="text-blue-600"
-        href="https://github.com/saadeghi/theme-change"
-        target="_blank"
-      >
-        https://github.com/saadeghi/theme-change
-      </a>
     </div>
   </body>
 </html>
