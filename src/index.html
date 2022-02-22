@@ -10,6 +10,32 @@
         color: rgb(200, 255, 0);
         text-align: center;
       }
+      :root {
+        --color-default: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --color-default: #252b30;
+        }
+      }
+      [data-theme='dark'] {
+        --color-default: #252b30;
+      }
+      [data-theme='black'] {
+        --color-default: #000000;
+      }
+      [data-theme='🌸'] {
+        --color-default: #ffabc8;
+      }
+      [data-theme='🐬'] {
+        --color-default: #7ec6ff;
+      }
+      [data-theme='🐤'] {
+        --color-default: #ffd65a;
+      }
+      body {
+        background-color: var(--color-default);
+      }
     </style>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.1.0/dist/full.css"
@@ -17,116 +43,99 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.1/index.js"></script>
 
     <script type="text/javascript">
       console.log('console, ming')
     </script>
   </head>
   <body>
-    <p>hello, ming</p>
-    <div id="root"></div>
-    <script type="module" src="./main.tsx"></script>
-    <div class="mockup-phone">
-      <div class="camera"></div>
-      <div class="display">
-        <div class="artboard artboard-demo phone-1">Hi.</div>
+    <div class="m-5">
+      <h2 class="mb-4 text-2xl text-green-700 font-bold">Toggle</h2>
+      🌞
+      <div class="inline-block w-10">
+        <span
+          data-toggle-theme="dark"
+          data-act-class="pl-4"
+          class="border rounded-full border-green-700 flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0"
+        >
+          <span class="rounded-full w-3 h-3 m-1 bg-green-700"></span>
+        </span>
       </div>
-    </div>
-    <!-- buttons -->
-    <div class="m-4">
-      <button class="btn btn-primary">primary</button>
-      <button class="btn btn-secondary">secondary</button>
-      <button class="btn btn-accent">accent</button>
+      🌚
     </div>
 
-    <!-- same buttons with another theme! -->
-    <div class="m-4" data-theme="valentine">
-      <button class="btn btn-primary">primary</button>
-      <button class="btn btn-secondary">secondary</button>
-      <button class="btn btn-accent">accent</button>
-    </div>
-
-    <!-- tab -->
-    <div class="m-4 tabs">
-      <button class="tab tab-lifted">Tab 1</button>
-      <button class="tab tab-lifted tab-active">Tab 2</button>
-      <button class="tab tab-lifted">Tab 3</button>
-    </div>
-
-    <!-- toggle -->
-    <div class="m-4">
-      <input type="checkbox" class="toggle toggle-primary" />
-      <input type="checkbox" class="toggle toggle-secondary" />
-      <input type="checkbox" class="toggle toggle-accent" />
-    </div>
-
-    <!-- card -->
-    <div class="card shadow-2xl w-80 m-4">
-      <figure>
-        <img src="https://picsum.photos/id/1005/500/250" />
-      </figure>
-      <div class="card-body">
-        <h2 class="card-title">DaisyUI Card</h2>
-        <p>
-          Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit
-          sit necessitatibus.
-        </p>
-      </div>
-    </div>
-
-    <!-- dropdown -->
-    <div class="dropdown m-4">
-      <div tabindex="0" class="m-1 btn">Dropdown</div>
-      <ul
-        tabindex="0"
-        class="p-2 menu dropdown-content bg-neutral text-neutral-content rounded-box w-52"
+    <div class="m-5">
+      <h2 class="mb-4 text-2xl text-green-700 font-bold">Buttons</h2>
+      <button
+        data-act-class="shadow-outline"
+        data-set-theme=""
+        class="bg-green-700 focus:outline-none m-1 rounded p-2"
       >
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-      </ul>
+        Default
+      </button>
+      <button
+        data-act-class="shadow-outline"
+        data-set-theme="dark"
+        class="bg-green-700 focus:outline-none m-1 rounded p-2"
+      >
+        Dark
+      </button>
+      <button
+        data-act-class="shadow-outline"
+        data-set-theme="black"
+        class="bg-green-700 focus:outline-none m-1 rounded p-2"
+      >
+        Black
+      </button>
+      <button
+        data-act-class="shadow-outline"
+        data-set-theme="🌸"
+        class="bg-green-700 focus:outline-none m-1 rounded p-2"
+      >
+        🌸 Pink
+      </button>
+      <button
+        data-act-class="shadow-outline"
+        data-set-theme="🐬"
+        class="bg-green-700 focus:outline-none m-1 rounded p-2"
+      >
+        🐬 Blue
+      </button>
+      <button
+        data-act-class="shadow-outline"
+        data-set-theme="🐤"
+        class="bg-green-700 focus:outline-none m-1 rounded p-2"
+      >
+        🐤 Yellow
+      </button>
     </div>
 
-    <!-- modal button -->
-    <label for="my-modal" class="btn modal-button">Modal</label>
-    <!-- modal content -->
-    <input type="checkbox" id="my-modal" class="modal-toggle" />
-    <div class="modal">
-      <div class="modal-box">
-        <p>
-          Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut
-          adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla ea
-          quasi eligendi. Saepe velit autem minima.
-        </p>
-        <div class="modal-action">
-          <label for="my-modal" class="btn">Close</label>
-        </div>
-      </div>
+    <div class="m-5">
+      <h2 class="mb-4 text-2xl text-green-700 font-bold">Select</h2>
+      <select
+        data-choose-theme
+        class="focus:outline-none h-10 rounded-full px-3 border"
+      >
+        <option value="">Default</option>
+        <option value="dark">Dark</option>
+        <option value="black">Black</option>
+        <option value="🌸">🌸 Pink</option>
+        <option value="🐬">🐬 Blue</option>
+        <option value="🐤">🐤 Yellow</option>
+      </select>
     </div>
 
-    <!-- steps -->
-    <ul class="steps my-4 w-full">
-      <li class="step step-primary">Register</li>
-      <li class="step step-primary">Choose plan</li>
-      <li class="step">Purchase</li>
-      <li class="step">Receive Product</li>
-    </ul>
-
-    <!-- avatar -->
-    <div class="avatar online m-10">
-      <div class="rounded-full w-24 h-24">
-        <img
-          src="http://daisyui.com/tailwind-css-component-profile-1@94w.png"
-        />
-      </div>
+    <div class="m-5 bg-white rounded p-5">
+      <h2 class="mb-4 text-2xl text-bold">How to use:</h2>
+      Github:
+      <a
+        class="text-blue-600"
+        href="https://github.com/saadeghi/theme-change"
+        target="_blank"
+      >
+        https://github.com/saadeghi/theme-change
+      </a>
     </div>
-    <div class="avatar offline m-10">
-      <div class="rounded-full w-24 h-24">
-        <img
-          src="http://daisyui.com/tailwind-css-component-profile-2@94w.png"
-        />
-      </div>
-    </div>
-
-    <!-- see all components: https://daisyui.com/components/button -->
   </body>
 </html>
