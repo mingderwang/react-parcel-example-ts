@@ -7,3 +7,5 @@
 * Tailwaincss
 * DaisyUI
 * @tail-kit/tail-kit 0.1.21
+# demo
+[live demo](https://demo3.muzamint.com/)
