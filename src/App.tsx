@@ -1,9 +1,11 @@
 import * as React from 'react'
-
-import '../styles/globals.css'
+import BasicDrawer from './components/BasicDrawer'
+import SubmitFormInDrawer from './components/SubmitFormInDrawer'
+import '@tail-kit/tail-kit/dist/tail-kit.css'
 
 export const App = () => (
-  <div className="h-screen flex items-center justify-center">
-    <button className="btn">Button</button>
+  <div>
+    <BasicDrawer />
+    <SubmitFormInDrawer />
   </div>
 )
