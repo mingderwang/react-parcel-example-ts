@@ -1,7 +1,7 @@
 {
   "name": "parcel-react-ts-example",
   "description": "Parcel + TypeScript + TailwindCSS + DaisyUI",
-  "version": "v0.0.3",
+  "version": "v0.0.4",
   "license": "MIT",
   "scripts": {
     "dev": "parcel serve src/index.html --open --port 3000 --hot",
